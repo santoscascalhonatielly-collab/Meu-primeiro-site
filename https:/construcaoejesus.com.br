@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construção e Jesus | Edificando Vidas e Obras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513', // Marrom - construção
+                        secondary: '#D4AF37', // Dourado - fé
+                        faith: '#1E40AF', // Azul - espiritualidade
+                        light: '#F8F5F0',
+                        dark: '#2C1810'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Roboto', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            .bg-gradient-faith {
+                background: linear-gradient(135deg, #8B4513 0%, #1E40AF 100%);
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- Navegação -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="font-display font-bold text-2xl text-primary">
+                <span class="text-faith">✝️</span> Construção e Jesus
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex gap-8">
+                <a href="#inicio" class="font-medium hover:text-primary transition">Início</a>
+                <a href="#sobre" class="font-medium hover:text-primary transition">Sobre Nós</a>
+                <a href="#construcao" class="font-medium hover:text-primary transition">Construção</a>
+                <a href="#fe" class="font-medium hover:text-primary transition">Fé em Jesus</a>
+                <a href="#blog" class="font-medium hover:text-primary transition">Blog</a>
+                <a href="#contato" class="font-medium hover:text-primary transition">Contato</a>
+            </div>
+            
+            <!-- Botão Menu Mobile -->
+            <button class="md:hidden text-2xl" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div class="md:hidden hidden bg-white absolute w-full border-t" id="mobileMenu">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-4">
+                <a href="#inicio" class="font-medium py-2 hover:text-primary transition">Início</a>
+                <a href="#sobre" class="font-medium py-2 hover:text-primary transition">Sobre Nós</a>
+                <a href="#construcao" class="font-medium py-2 hover:text-primary transition">Construção</a>
+                <a href="#fe" class="font-medium py-2 hover:text-primary transition">Fé em Jesus</a>
+                <a href="#blog" class="font-medium py-2 hover:text-primary transition">Blog</a>
+                <a href="#contato" class="font-medium py-2 hover:text-primary transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="bg-gradient-faith text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-tight mb-6 text-shadow">
+                    Edificando com as Mãos,<br>Guiados por Jesus
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-100">
+                    Unindo a sabedoria da construção com os valores eternos do Reino. Tudo fazemos com excelência e fé.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#blog" class="bg-secondary hover:bg-yellow-500 text-dark font-bold px-8 py-3 rounded-lg transition shadow-lg">
+                        Ler Artigos
+                    </a>
+                    <a href="#sobre" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm font-bold px-8 py-3 rounded-lg transition">
+                        Conhecer Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold text-primary mb-4">Nossa Missão</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                    "Edificamos estruturas sólidas e vidas firmadas na Rocha." Somos um espaço onde a técnica encontra a fé, onde cada obra é uma oferenda e cada palavra é uma luz.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="font-display text-2xl font-bold text-faith mb-4">Por que Construção e Jesus?</h3>
+                    <p class="mb-4 text-gray-700">
+                        A construção é uma metáfora poderosa da vida espiritual. Jesus é a pedra angular, o alicerce que não pode ser abalado.
+                    </p>
+                    <p class="mb-6 text-gray-700">
+                        Como em uma obra, precisamos de alicerce firme, materiais de qualidade, paciência e trabalho em equipe — tudo isso encontramos em Cristo.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check-circle text-green-600 mt-1"></i>
+                            <span>Compromisso com a excelência</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check-circle text-green-600 mt-1"></i>
+                            <span>Honestidade em cada projeto</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check-circle text-green-600 mt-1"></i>
+                            <span>Fé como fundamento de tudo</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://picsum.photos/id/106/800/600" alt="Construção e fé" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Construção -->
+    <section id="construcao" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold text-primary mb-4">🏗️ Construção com Excelência</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                    Dicas, técnicas e sabedoria para construir bem, com responsabilidade e dedicação.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-2xl mb-4">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Fundamentos Sólidos</h3>
+                    <p class="text-gray-600 mb-4">
+                        A importância de preparar bem o solo e escolher materiais de qualidade antes de erguer as paredes.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Ler mais →</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-2xl mb-4">
+                        <i class="fa fa-wrench"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Manutenção Preventiva</h3>
+                    <p class="text-gray-600 mb-4">
+                        Como cuidar de sua casa para que dure gerações — pequenos reparos que fazem grande diferença.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Ler mais →</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-2xl mb-4">
+                        <i class="fa fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Construção Sustentável</h3>
+                    <p class="text-gray-600 mb-4">
+                        Cuidar da criação é também uma missão. Práticas ecológicas para construir com consciência.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Ler mais →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Fé -->
+    <section id="fe" class="py-20 bg-faith/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold text-faith mb-4">✝️ Firmados na Rocha</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                    "Todo aquele que ouve estas minhas palavras e as pratica será comparado a um homem prudente que edificou a sua casa sobre a rocha." — Mateus 7:24
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-xl mb-4 text-faith">Jesus: A Pedra Angular</h3>
+                    <p class="mb-4 text-gray-700">
+                        Sem Cristo, nossas obras podem parecer belas, mas não resistem às tempestades da vida. Ele é o alicerce indispensável.
+                    </p>
+                    <p class="text-gray-700">
+                        Quando construímos nossa vida sobre Ele, temos segurança, propósito e esperança que não se abala.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-xl mb-4 text-faith">Sendo Construídos</h3>
+                    <p class="mb-4 text-gray-700">
+                        Não apenas construímos; também somos construídos. Deus trabalha em nós, lapidando, corrigindo e aperfeiçoando.
+                    </p>
+                    <p class="text-gray-700">
+                        Como pedras vivas, somos edificados como templo espiritual (1 Pedro 2:5).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Últimos Artigos -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold text-primary mb-4">📝 Últimos Artigos</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Artigo 1 -->
+                <article class="bg-light rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://picsum.photos/id/1076/500/300" alt="Alicerce firme" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-medium">Fé • 22 Set 2026</span>
+                        <h3 class="font-bold text-xl my-3">O Alicerce que Não Se Abala</h3>
+                        <p class="text-gray-600 mb-4">
+                            Por que escolher Jesus como base de tudo? Uma reflexão sobre a parábola dos dois fundamentos.
+                        </p>
+                        <a href="#" class="text-faith font-medium hover:underline">Leia completo →</a>
+                    </div>
+                </article>
+
+                <!-- Artigo 2 -->
+                <article class="bg-light rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://picsum.photos/id/1058/500/300" alt="Excelência no trabalho" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-medium">Construção • 15 Set 2026</span>
+                        <h3 class="font-bold text-xl my-3">Trabalhar com Excelência é Adorar</h3>
+                        <p class="text-gray-600 mb-4">
+                            Colossenses 3:23 — "Tudo quanto fizerdes, fazei-o de coração, como para o Senhor e não para homens."
+                        </p>
+                        <a href="#" class="text-faith font-medium hover:underline">Leia completo →</a>
+                    </div>
+                </article>
+
+                <!-- Artigo 3 -->
+                <article class="bg-light rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://picsum.photos/id/1039/500/300" alt="Pedras vivas" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-medium">Fé & Vida • 08 Set 2026</span>
+                        <h3 class="font-bold text-xl my-3">Pedras Vivas na Obra de Deus</h3>
+                        <p class="text-gray-600 mb-4">
+                            Como cada um de nós tem um lugar e uma função na construção do Reino.
+                        </p>
+                        <a href="#" class="text-faith font-medium hover:underline">Leia completo →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-primary text-white font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition shadow-lg">
+                    Ver Todos os Artigos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Versículo em Destaque -->
+    <section class="py-16 bg-gradient-faith text-white">
+        <div class="container mx-auto px-4 text-center">
+            <blockquote class="font-display text-[clamp(1.5rem,4vw,2.5rem)] font-bold italic max-w-4xl mx-auto leading-relaxed">
+                "Edificai-vos sobre o fundamento dos apóstolos e dos profetas, sendo Cristo Jesus mesmo a pedra principal da esquina."
+            </blockquote>
+            <p class="mt-6 text-lg">— Efésios 2:20</p>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold text-primary mb-4">💬 Fale Conosco</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                    Tem uma história para compartilhar, dúvida ou oração? Envie-nos uma mensagem!
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <form class="space-y-5">
+                    <div>
+                        <label for="nome" class="block font-medium mb-2">Seu Nome</label>
+                        <input type="text" id="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Digite seu nome">
+                    </div>
+                    <div>
+                        <label for="email" class="block font-medium mb-2">Seu E-mail</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="seuemail@exemplo.com">
+                    </div>
+                    <div>
+                        <label for="mensagem" class="block font-medium mb-2">Sua Mensagem</label>
+                        <textarea id="mensagem" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Escreva aqui sua mensagem..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition shadow-lg">
+                        Enviar Mensagem <i class="fa fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <h3 class="font-display font-bold text-2xl mb-4">✝️ Construção e Jesus</h3>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Unindo a sabedoria da construção com os valores eternos do Reino. Edificando vidas e obras para a glória de Deus.
+                    </p>
+                    <div class="flex gap-4 text-xl">
+                        <a href="#" class="text-gray-400 hover:text-secondary transition"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#inicio" class="hover:text-secondary transition">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-secondary transition">Sobre Nós</a></li>
+                        <li><a href="#construcao" class="hover:text-secondary transition">Construção</a></li>
+                        <li><a href="#fe" class="hover:text-secondary transition">Fé em Jesus</a></li>
+                        <li><a href="#blog" class="hover:text-secondary transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contato</h4>
+                    <ul class="space-y-2 text-g
